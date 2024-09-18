@@ -17,7 +17,7 @@ body {
 /* mobile **************************/
 header {
 
-	background-color: #bbb;
+	background-color: #38618C;
 	align-items: center;
 	justify-content: center;
 	padding: 20px;
@@ -26,9 +26,12 @@ header {
 }
 .mainHeader{
     display: flex;
+    justify-content: center;
+    color: white;
 }
 .mainHeader h1 {
     padding: 10px;
+    text-align: center;
 }
 h1 {
 	font-size: 2rem;
@@ -42,22 +45,53 @@ main {
 	justify-content: space-around;
     padding: 10px;
     column-gap: 10px;
+    width: 100%;
+}
+section {
+    border: solid 1px black;
+    border-radius: 10px 10px 0px 0px;
+    margin: 1%
+}
+section h2 {
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #ff5964;
+    color: white;
+}
+#cardSection1 {
+    display: flex;
+    padding: 10px;
 }
 
-section ul {
-    list-style-type:none;
+#cardSection1 h5 {
+    margin: 5px;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
 }
+#cardSection2 h4 {
+    margin: 5px;
+    width: 97%;
+    text-align: center;
+    padding: 5px;
+    background-color: #38618C;
+    color: white;
+    border-radius: 3px;
+}
+
 #menu {
 	display: block;
 	font-size: 2rem;
 	font-weight:700;
 	text-decoration: none;
 	padding: .5rem .75rem;
-	color: #000;
     position: absolute;
     top: 1rem;
     right: 1rem;
-    color: #000000;
+    color: white;
 }
 #menu::before {
 	content: "≡";
@@ -81,16 +115,63 @@ section ul {
 	font-weight: 700;
 	transition: 0.5s;
 	font-size: clamp(1rem, 2vmin, 1.5rem);
-    color:rgb(18, 17, 121);
+    color: white;
 	
 }
 .navigation a:hover, .navigation a:active {
 	color: white;
-	background-color: tomato;
+	background-color: #ff5964;
 }
 .show li {
 	display: block;
 }
 #menu.show::before {
 	content: "x";
+}
+
+footer{
+    background-color:#38618C;
+    color:white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Larger Views ******************************/
+@media (min-width: 640px) {
+    body {
+        grid-template: 1fr 5fr 1fr / 1fr 1fr 1fr;
+    }
+    header {
+        grid-column: 1 / 4;
+    }
+    .navigation {
+        display: flex;
+    }
+    .navigation li {
+        display: block;
+        flex: 1 1 100%;
+    }
+    .navigation a{
+        text-align: center;
+    }
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-column: 1 / 4;
+    }
+    section:nth-last-child(1) {
+        grid-column: 1 / 3;
+    }
+    #cardSection2{
+        display: flex;
+
+    }
+    #menu {
+        display: none;
+    }
+    footer {
+        grid-row: 3 / 4;
+        grid-column: 1 / 4;
+    }
 }
