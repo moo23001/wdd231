@@ -1,3 +1,10 @@
+:root {
+    --backgroundcolorDark: #324E84;
+    --backgroundcolorLight: #ff5964;
+    --fontcolorLight: white;
+    --fontcolorDark:black;
+
+}
 * {
     margin: 0;
     padding: 0px;
@@ -17,7 +24,7 @@ body {
 /* mobile **************************/
 header {
 
-	background-color: #38618C;
+	background-color: var(--backgroundcolorDark);
 	align-items: center;
 	justify-content: center;
 	padding: 20px;
@@ -55,13 +62,29 @@ section {
 section h2 {
     text-align: center;
     border-radius: 10px 10px 0px 0px;
-    background-color: #ff5964;
-    color: white;
+    background-color: var(--backgroundcolorLight);
+    color: var(--fontcolorDark);
     padding: 10px;
 }
 #cardSection1 {
     display: flex;
     padding: 10px;
+}
+
+#mtyImg {
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    height: auto;
+}
+.card p {
+    font-size: smaller;
+    text-align: center;
+}
+.card ul {
+    margin: 25px;
 }
 
 #cardSection1 h5 {
@@ -78,10 +101,11 @@ section h2 {
     width: 97%;
     text-align: center;
     padding: 10px;
-    background-color: #38618C;
-    color: white;
+    background-color: var(--backgroundcolorDark);
+    color: var(--fontcolorLight);
     border-radius: 3px;
 }
+
 
 #menu {
 	display: block;
@@ -92,7 +116,7 @@ section h2 {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    color: white;
+    color: var(--fontcolorLight);
 }
 #menu::before {
 	content: "≡";
@@ -116,12 +140,12 @@ section h2 {
 	font-weight: 700;
 	transition: 0.5s;
 	font-size: clamp(1rem, 2vmin, 1.5rem);
-    color: white;
+    color: var(--fontcolorLight);
 	
 }
 .navigation a:hover, .navigation a:active {
-	color: white;
-	background-color: #ff5964;
+	color: var(--fontcolorLight);
+	background-color: var(--backgroundcolorLight);
 }
 .show li {
 	display: block;
@@ -131,8 +155,8 @@ section h2 {
 }
 
 footer{
-    background-color:#38618C;
-    color:white;
+    background-color:var(--backgroundcolorDark);
+    color:var(--fontcolorLight);
     text-align: center;
     padding: 20px;
 }
