@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 231 - Dynamic Web Fundamentals - Pedro Moo</title>
+    <title>WDD 231 - Web Front End Development I- Pedro Moo</title>
     <meta name="description" content="WDD 231 Web Frontend Development I home page for Pedro Moo's work">
     <meta name="author" content="Pedro Moo">
     <link rel="stylesheet" href="styles/normalize.css">
@@ -12,27 +12,58 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/menu.js"></script>
 </head>
 <body>
     <header>
-        <div>
-            <img src="" alt="">
-            <h1></h1>
+        <div class="mainHeader">
+            <img id="pmimage" src="images/pmimage.webp" alt="Pedro Moo's picture">
+            <h1>Pedro Moo</h1>
         </div>
         <nav>
-            <ul>
+            <a id="menu" href="#"></a>
+            <ul class="navigation">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Chamber</a></li>
                 <li><a href="#">Github Profile</a></li>
-                <li><a href="https://www.linkedin.com/in/pedro-moo/">LInkedIn</a></li>                
+                <li><a href="https://www.linkedin.com/in/pedro-moo/">LinkedIn</a></li>                
             </ul>
         </nav>
     </header>
     <main>
-
+        <div>
+            <h2>Course Work</h2>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div>
+            <h2>Monterrey, Mexico</h2>
+            <img src="images/monterrey-city.webp" alt="Monterrey, Mexico view from the skyline">
+        </div>
+        <div>
+            <h2>Web and Computer Programming Certificate</h2>
+            <div>
+                <h5>All</h5>
+                <h5>CSE</h5>
+                <h5>WDD</h5>
+            </div>
+            <div>
+                <h4>CSE 110</h4>
+                <h4>WDD 130</h4>
+                <h4>CSE 111</h4>
+                <h4>CSE 210</h4>
+                <h4>WDD 131</h4>
+                <h4>WDD 231</h4>
+            </div>
+        </div>
     </main>
     <footer>
-
+        <p>&copy; <span id="currentyear"></span> Pedro Moo - Monterrey, Mexico</p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 </html>
