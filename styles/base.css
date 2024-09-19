@@ -144,10 +144,18 @@ section h2 {
     color: var(--fontcolorLight);
 	
 }
-.navigation a:hover, .navigation a:active {
+.navigation a:hover, .navigation a:active, .navigation a.active {
 	color: var(--fontcolorLight);
 	background-color: var(--backgroundcolorLight);
 }
+
+.navigation a.active {
+    background-color: var(--backgroundcolorLight); /* Highlight active page with the lighter background color */
+    color: var(--fontcolorDark); /* Change font color to dark for better contrast */
+    font-weight: bold; /* Make the active page link bold */
+    border-bottom: 3px solid var(--fontcolorLight); /* Adds a bottom border to highlight the active page */
+}
+
 .show li {
 	display: block;
 }
