@@ -93,3 +93,21 @@ function courseCards(filteredCards) {
 
 }
 
+const allCourses = document.querySelector('#allCourses');
+const cseCourses = document.querySelector('#cseCourses');
+const wddCourses = document.querySelector('#wddCourses');
+
+allCourses.addEventListener("click", () => {
+    document.querySelector("#cardSection2").innerHTML = "";
+    courseCards(courses);
+})
+
+cseCourses.addEventListener("click", () => {
+    document.querySelector("#cardSection2").innerHTML = "";
+    courseCards(courses.filter(course => course.subject == 'CSE'));
+})
+
+wddCourses.addEventListener("click", () => {
+    document.querySelector("#cardSection2").innerHTML = "";
+    courseCards(courses.filter(course => course.subject == 'WDD'));
+})
