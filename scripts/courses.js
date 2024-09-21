@@ -118,3 +118,10 @@ wddCourses.addEventListener("click", () => {
     courseCards(courses.filter(course => course.subject == 'WDD'));
 })
 
+const credits = courses.reduce((accumulator, course) => {
+    return accumulator + course.credits;
+}, 0);
+
+const displayCredits = document.querySelector("#credits");
+displayCredits.innerHTML = `Credits required ${credits}`;
+
