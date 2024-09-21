@@ -87,7 +87,13 @@ function courseCards(filteredCards) {
     filteredCards.map((course) => {
         const cCard = document.createElement("h4");
         cCard.classList = 'course';
-        cCard.innerHTML = `${course.subject} ${course.number}`;
+        if (course.completed == true) {
+            cCard.innerHTML = `${course.subject} ${course.number} ✅`;
+        } else {
+            cCard.innerHTML = `${course.subject} ${course.number} ⬜`;
+
+        }
+
         section2.appendChild(cCard);
     })
 
@@ -111,3 +117,4 @@ wddCourses.addEventListener("click", () => {
     document.querySelector("#cardSection2").innerHTML = "";
     courseCards(courses.filter(course => course.subject == 'WDD'));
 })
+
