@@ -1,0 +1,28 @@
+{
+    "family_name": "Moo",
+    "move_in_date": "2006-06-24",
+    "number_of_people": 4,
+    "visited_by_bishopric": true,
+    "family_members": [
+        {
+            "name": "Pedro Moo",
+            "gender": "Male",
+            "birthdate": "1981-01-01"
+        },
+        {
+            "name": "Brenda Arreola",
+            "gender": "Female",
+            "birthdate": "1982-01-01"
+        },
+        {
+            "name": "Israel Moo",
+            "gender": "Male",
+            "birthdate": "2010-03-05"
+        },
+        {
+            "name": "Ana Moo",
+            "gender": "Female",
+            "birthdate": "2012-11-10"
+        }
+    ]
+}
