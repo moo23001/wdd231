@@ -135,12 +135,12 @@ section h2 {
 }
 .navigation {
 	list-style: none;
-	margin: 0 auto;
+
 	max-width: 900px;
 }
 
 .navigation li {
-	display: none;
+
 	border-radius: 10px;
 }
 .navigation a {
@@ -167,8 +167,16 @@ section h2 {
     border-bottom: 3px solid var(--fontcolorLight); /* Adds a bottom border to highlight the active page */
 }
 
-.show li {
-	display: block;
+nav {
+	display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+nav ul {
+    overflow: hidden;
+}
+nav.show {
+    grid-template-rows: 1fr;
 }
 #menu.show::before {
 	content: "x";
@@ -190,12 +198,22 @@ footer{
     header {
         grid-column: 1 / 4;
     }
+    nav {
+        grid-template-rows: 1fr;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
     .navigation {
         display: flex;
+        width: 100%;
     }
     .navigation li {
-        display: block;
-        flex: 1 1 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
     }
     .navigation a{
         text-align: center;
