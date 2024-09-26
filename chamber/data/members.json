@@ -1,0 +1,116 @@
+[
+    {
+        "name": "Monterrey Tech Solutions",
+        "address": "Av. Constitución 1234, Centro, Monterrey, N.L.",
+        "phone": "+52 81 1234 5678",
+        "website": "https://www.monterreytech.com",
+        "image": "monterreytech_icon.png",
+        "logoUrl": "https://www.monterreytech.com/logo.png",
+        "membershipLevel": 3,
+        "otherInfo": {
+            "services": [
+                "IT Support",
+                "Networking",
+                "Cloud Solutions"
+            ],
+            "yearFounded": 2005
+        }
+    },
+    {
+        "name": "Regio Marketing Agency",
+        "address": "Calle Padre Mier 567, Monterrey, N.L.",
+        "phone": "+52 81 8765 4321",
+        "website": "https://www.regiomarketing.mx",
+        "image": "regiomarketing_logo.png",
+        "logoUrl": "https://www.regiomarketing.mx/logo.png",
+        "membershipLevel": 2,
+        "otherInfo": {
+            "services": [
+                "SEO",
+                "Social Media Management",
+                "Branding"
+            ],
+            "yearFounded": 2010
+        }
+    },
+    {
+        "name": "Industria Regia",
+        "address": "Blvd. Díaz Ordaz 789, San Pedro Garza García, N.L.",
+        "phone": "+52 81 9876 5432",
+        "website": "https://www.industriaregia.com",
+        "image": "industriaregia_icon.png",
+        "logoUrl": "https://www.industriaregia.com/logo.png",
+        "membershipLevel": 1,
+        "otherInfo": {
+            "services": [
+                "Manufacturing",
+                "Metal Fabrication"
+            ],
+            "yearFounded": 1998
+        }
+    },
+    {
+        "name": "Salud Monterrey",
+        "address": "Av. Universidad 456, San Nicolás de los Garza, N.L.",
+        "phone": "+52 81 2345 6789",
+        "website": "https://www.saludmonterrey.com.mx",
+        "image": "saludmonterrey_logo.png",
+        "logoUrl": "https://www.saludmonterrey.com.mx/logo.png",
+        "membershipLevel": 3,
+        "otherInfo": {
+            "services": [
+                "Health Services",
+                "Medical Equipment"
+            ],
+            "yearFounded": 2000
+        }
+    },
+    {
+        "name": "EcoFriendly Solutions Monterrey",
+        "address": "Calle Morelos 234, Monterrey, N.L.",
+        "phone": "+52 81 5432 1234",
+        "website": "https://www.ecosolutions.mx",
+        "image": "ecosolutions_logo.png",
+        "logoUrl": "https://www.ecosolutions.mx/logo.png",
+        "membershipLevel": 2,
+        "otherInfo": {
+            "services": [
+                "Sustainable Energy",
+                "Environmental Consulting"
+            ],
+            "yearFounded": 2012
+        }
+    },
+    {
+        "name": "Aventuras Infantiles",
+        "address": "Av. Revolución 567, Monterrey, N.L.",
+        "phone": "+52 81 1122 3344",
+        "website": "https://www.aventurasinfantiles.com",
+        "image": "aventurasinfantiles_icon.png",
+        "logoUrl": "https://www.aventurasinfantiles.com/logo.png",
+        "membershipLevel": 1,
+        "otherInfo": {
+            "services": [
+                "Kids Entertainment",
+                "Party Planning"
+            ],
+            "yearFounded": 2015
+        }
+    },
+    {
+        "name": "TecMon S.A. de C.V.",
+        "address": "Calle Hidalgo 123, Monterrey, N.L.",
+        "phone": "+52 81 6789 1234",
+        "website": "https://www.tecmon.com.mx",
+        "image": "tecmon_logo.png",
+        "logoUrl": "https://www.tecmon.com.mx/logo.png",
+        "membershipLevel": 3,
+        "otherInfo": {
+            "services": [
+                "Construction",
+                "Infrastructure Development"
+            ],
+            "yearFounded": 1995
+        }
+    }
+]
