@@ -97,8 +97,8 @@ nav.show {
 main {
 	margin: 0 auto;
 	padding: 0.5rem;
-	max-width: 800px;
-	background-color: var(--backgroundcolorDark);
+	max-width: 900px;
+	background-color: var(--backgroundcolorLight);
 	font-family: var(--fontfamilyPrimary), Helvetica, sans-serif;
 }
 
@@ -106,7 +106,7 @@ main {
 	margin: 1rem auto;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	padding: 0.5rem;
-	background-color: var(--backgroundcolorDark);
+	background-color: var(--backgroundcolorLight);
 	text-align: center;
 }
 
@@ -116,7 +116,7 @@ main {
 }
 
 section {
-	border: 1px solid rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(0, 0, 0, 0.2);
 	padding: 0.5rem;
 	background-color: var(--backgroundcolorLight);
 }
@@ -130,6 +130,7 @@ section {
 
 .grid section {
 	text-align: center;
+    
 }
 
 .grid img {
@@ -188,8 +189,8 @@ section p {
 
 section a {
 	font-family: var(--fontfamilyPrimary), Arial, sans-serif;
-	font-size: 0.85rem;
-	color: navy;
+	font-size: 0.70rem;
+	color: var(--backgroundcolorDark);
 	letter-spacing: 1.1pt;
 }
 
