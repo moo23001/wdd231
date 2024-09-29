@@ -26,13 +26,15 @@ const displayMembers = (members) => {
         let yearFounded = document.createElement('p');
         let address = document.createElement('p');
         let phone = document.createElement('p');
-        let webAddress = document.createElement('p');
+        let webAddress = document.createElement('a');
 
         memberName.textContent = `${member.name}`;
         yearFounded.textContent = `Year founded: ${member.otherInfo.yearFounded}`;
         address.textContent = `${member.address}`;
         phone.textContent = `${member.phone}`;
-        webAddress.textContent = `${member.website}`
+        webAddress.textContent = `${member.website}`;
+
+        webAddress.setAttribute('href',member.website);
 
         logo.setAttribute('src', member.logoUrl);
         logo.setAttribute('alt', `logo of ${member.image}`);
