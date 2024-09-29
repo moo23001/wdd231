@@ -167,13 +167,16 @@ section {
 
 .list section h3 {
 	font-size: 1rem;
-	font-family: Roboto, Helvetica, sans-serif;
+	font-family: var(--fontfamilyPrimary), Helvetica, sans-serif;
 }
 
 .list section:nth-child(even) {
-	background-color: #bed;
+	background-color: var(--backgroundcolorDark);
+    color: var(--fontcolorLight);
 }
-
+.list section:nth-child(even) a {
+    color: var(--fontcolorLight);
+}
 section h3 {
 	font-size: 1.5rem;
 }
@@ -184,7 +187,7 @@ section p {
 }
 
 section a {
-	font-family: "Roboto", Arial, sans-serif;
+	font-family: var(--fontfamilyPrimary), Arial, sans-serif;
 	font-size: 0.85rem;
 	color: navy;
 	letter-spacing: 1.1pt;
