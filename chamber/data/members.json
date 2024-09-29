@@ -5,7 +5,7 @@
         "phone": "+52 81 1234 5678",
         "website": "https://www.monterreytech.com",
         "image": "monterreytech_icon.png",
-        "logoUrl": "https://www.monterreytech.com/logo.png",
+        "logoUrl": "https://img.icons8.com/color/it",
         "membershipLevel": 3,
         "otherInfo": {
             "services": [
@@ -22,7 +22,7 @@
         "phone": "+52 81 8765 4321",
         "website": "https://www.regiomarketing.mx",
         "image": "regiomarketing_logo.png",
-        "logoUrl": "https://www.regiomarketing.mx/logo.png",
+        "logoUrl": "https://img.icons8.com/color/laptop",
         "membershipLevel": 2,
         "otherInfo": {
             "services": [
@@ -39,7 +39,7 @@
         "phone": "+52 81 9876 5432",
         "website": "https://www.industriaregia.com",
         "image": "industriaregia_icon.png",
-        "logoUrl": "https://www.industriaregia.com/logo.png",
+        "logoUrl": "https://img.icons8.com/color/metal",
         "membershipLevel": 1,
         "otherInfo": {
             "services": [
@@ -55,7 +55,7 @@
         "phone": "+52 81 2345 6789",
         "website": "https://www.saludmonterrey.com.mx",
         "image": "saludmonterrey_logo.png",
-        "logoUrl": "https://www.saludmonterrey.com.mx/logo.png",
+        "logoUrl": "https://img.icons8.com/color/stethoscope",
         "membershipLevel": 3,
         "otherInfo": {
             "services": [
@@ -71,7 +71,7 @@
         "phone": "+52 81 5432 1234",
         "website": "https://www.ecosolutions.mx",
         "image": "ecosolutions_logo.png",
-        "logoUrl": "https://www.ecosolutions.mx/logo.png",
+        "logoUrl": "https://img.icons8.com/color/light",
         "membershipLevel": 2,
         "otherInfo": {
             "services": [
@@ -87,7 +87,7 @@
         "phone": "+52 81 1122 3344",
         "website": "https://www.aventurasinfantiles.com",
         "image": "aventurasinfantiles_icon.png",
-        "logoUrl": "https://www.aventurasinfantiles.com/logo.png",
+        "logoUrl": "https://img.icons8.com/color/children",
         "membershipLevel": 1,
         "otherInfo": {
             "services": [
@@ -103,7 +103,7 @@
         "phone": "+52 81 6789 1234",
         "website": "https://www.tecmon.com.mx",
         "image": "tecmon_logo.png",
-        "logoUrl": "https://www.tecmon.com.mx/logo.png",
+        "logoUrl": "https://img.icons8.com/color/building",
         "membershipLevel": 3,
         "otherInfo": {
             "services": [
