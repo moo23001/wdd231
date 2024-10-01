@@ -23,8 +23,9 @@ header {
 }
 
 #logo {
-    width: 15vh;
-    height: auto;
+	min-width: 100px;
+    width: 10%;
+    height: 100px;
 }
 /*Dynamic Menu and navigation*/
 #menu {
