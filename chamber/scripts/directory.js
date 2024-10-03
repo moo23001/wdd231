@@ -41,6 +41,7 @@ const displayMembers = (members) => {
         logo.setAttribute('loading', 'lazy');
         logo.setAttribute('width', 'auto');
         logo.setAttribute('height', 'auto');
+        logo.classList.add('memberLogo');
 
         card.appendChild(logo);
         card.appendChild(memberName);
