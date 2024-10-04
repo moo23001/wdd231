@@ -12,10 +12,10 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+    font-family: var(--fontfamilyPrimary);
 }
 header {
     background-color: var(--backgroundcolorDark);
-    font-family: var(--fontfamilyPrimary);
     color: var(--fontcolorLight);
 }
 .mainHeader {
@@ -92,8 +92,31 @@ nav.show {
 
 
 /*********Index Main**********/
+#hero img {
+    display: block;
+    max-width: 1350px;
 
+    margin-left: auto;
+    margin-right: auto;
 
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+}
+
+#home section {
+    border: solid 1px var(--backgroundcolorDark);
+    height: 250px;
+    margin: 5px;
+}
+
+#home section h2 {
+    text-align: center;
+    color: var(--fontcolorLight);
+    background-color: var(--backgroundcolorDark);
+}
 
 /*********Index Footer********/
 footer{
@@ -101,7 +124,6 @@ footer{
     color:var(--fontcolorLight);
     text-align: center;
     padding: 20px;
-    font-family: var(--fontfamilyPrimary);
 }
 
 
@@ -109,6 +131,10 @@ footer{
 @media (min-width: 640px) {
     #menu {
         display: none;
+    }
+    #hero img{
+        width: 100%;
+        height: 450px;
     }
     nav {
         grid-template-rows: 1fr;
