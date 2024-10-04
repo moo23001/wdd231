@@ -1,0 +1,21 @@
+const urlWeather = 'http://api.openweathermap.org/data/2.5/forecast?lat=25.64259225444005&lon=-100.27718950800647&units=metric&appid=07b80f8d17c86fe77011c3973c68d381';
+const wCard = document.querySelector('#weather');
+const fCard = document.querySelector('#forecast');
+
+
+async function getWeatherData() {
+    try {
+        const response = await fetch(urlWeather);
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data);
+            /*displayMembers(data);*/
+        } else {
+            console.error(`HTTP error! status: ${response.status}`);
+        }
+    } catch (error) {
+        console.error(`Fetch error: ${error}`);
+    }
+}
+
+getWeatherData();
