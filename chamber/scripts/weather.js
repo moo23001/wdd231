@@ -26,6 +26,8 @@ const displayWeather = (weather) => {
     let weatherImgSrc = `https://openweathermap.org/img/wn/${weather.list[0].weather[0].icon}@2x.png`;
     temperature.innerHTML = `${Math.round(weather.list[0].main.temp)}&#8451`;
     weatherImg.setAttribute('src',weatherImgSrc);
+    weatherImg.setAttribute('alt',weather.list[0].weather[0].description);
+    weatherImg.setAttribute('loading', 'lazy');
     
     wCard.appendChild(weatherImg);
     wCard.appendChild(temperature);
