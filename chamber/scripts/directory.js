@@ -7,7 +7,7 @@ async function getMemberData() {
         const response = await fetch(url);
         if (response.ok) {
             const data = await response.json();
-            console.log(data);
+            /*console.log(data);*/
             displayMembers(data);
         } else {
             console.error(`HTTP error! status: ${response.status}`);
