@@ -151,6 +151,18 @@ nav.show {
     padding: 5px;
     margin: 5px;
 }
+/************ Current Weather ****************/
+#weather {
+    text-align: center;
+}
+.temp {
+    font-size: xx-large;
+
+}
+
+
+
+/************ Spotlight Section ***************/
 .spotlight{
     display: flex;
     flex-direction: column;
@@ -181,6 +193,7 @@ nav.show {
 .spotlightCard a{
     grid-column: 2 / 4;
     grid-row: 2 / 4;
+    font-size: clamp(.75rem, 1.75vw, 2.5rem);
 }
 
 .spotlightCard p {
@@ -231,6 +244,10 @@ footer{
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
     }
+
+}
+
+@media (min-width: 1000px) {
     .spotlight {
         display: flex;
         flex-direction: row;

@@ -22,13 +22,18 @@ getWeatherData();
 
 const displayWeather = (weather) => {
     let temperature = document.createElement('p');
+    let description = document.createElement('p');
     let weatherImg = document.createElement('img');
     let weatherImgSrc = `https://openweathermap.org/img/wn/${weather.list[0].weather[0].icon}@2x.png`;
     temperature.innerHTML = `${Math.round(weather.list[0].main.temp)}&#8451`;
+    description.innerHTML = weather.list[0].weather[0].description[0].toUpperCase()+weather.list[0].weather[0].description.substring(1);
     weatherImg.setAttribute('src',weatherImgSrc);
     weatherImg.setAttribute('alt',weather.list[0].weather[0].description);
     weatherImg.setAttribute('loading', 'lazy');
-    
-    wCard.appendChild(weatherImg);
+    temperature.classList.add('temp')
+
     wCard.appendChild(temperature);
+    wCard.appendChild(weatherImg);
+    wCard.appendChild(description);
+
 }
