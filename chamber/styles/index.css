@@ -160,6 +160,12 @@ nav.show {
 
 }
 
+/*********** Weather Forecast *************/
+#forecast div {
+    display: flex;
+    padding: 5px;
+    align-items: baseline;
+}
 
 
 /************ Spotlight Section ***************/
