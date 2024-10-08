@@ -82,7 +82,7 @@ courseCards(courses);
 function courseCards(filteredCards) {
 
     const section2 = document.querySelector("#cardSection2");
-    /*section2.innerHTML = "";*/
+    section2.innerHTML = "";
 
     filteredCards.map((course) => {
         const cCard = document.createElement("h4");
@@ -95,6 +95,7 @@ function courseCards(filteredCards) {
         }
 
         section2.appendChild(cCard);
+        cCard.addEventListener("click", () => displayModal(course));
     })
 
 }
@@ -125,3 +126,34 @@ const credits = courses.reduce((accumulator, course) => {
 const displayCredits = document.querySelector("#credits");
 displayCredits.innerHTML = `Credits required ${credits}`;
 
+
+function displayModal (course) {
+    const courseDetails = document.querySelector('#course-details');
+    /*const closeButton = document.createElement('button');
+    const subjectNumber = document.createElement('p');
+    const title = document.createElement('p');
+    const credits = document.createElement('p');
+    const description = document.createElement ('p');
+    const certificate = document.createElement('p');
+    const techStack = document.createElement('p');
+
+    closeButton.id = "closeModal";
+    closeButton.textContent = "❌";*/
+
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+        <button id="closeModal">❌</button>
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits</strong>: ${course.credits}</p>
+        <p>${course.description}</p>
+        <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `;
+    
+    courseDetails.showModal();
+
+    closeModal.addEventListener("click", () => {
+        courseDetails.close();
+    })
+
+}

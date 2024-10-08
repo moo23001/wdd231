@@ -80,10 +80,13 @@ section h2 {
     max-width: 500px;
     height: auto;
 }
+
+/*********** Couses (card) section ********/
 .card p {
     font-size: smaller;
     text-align: center;
 }
+
 .card ul {
     margin: 25px;
 }
@@ -97,13 +100,20 @@ section h2 {
     border-radius: 3px;
 
 }
+
 #cardSection1 a {
     display: block;
     text-decoration: none;
     color: white;
     padding: 10px;
 }
-#cardSection2 h4 {
+
+.course:hover {
+    background-color: var(--backgroundcolorLight);
+    color: var(--fontcolorDark);
+    cursor: pointer;
+}
+.course {
     margin: 5px;
     width: 97%;
     text-align: center;
@@ -181,6 +191,31 @@ nav.show {
 #menu.show::before {
 	content: "x";
 }
+
+
+
+
+/************* Modal ***************/
+dialog {
+    padding: 1em;
+    max-width: 50ch;
+    border: 0;
+    box-shadow: 0 0 1em rgb(0 0 0 / 0.3);
+}
+
+dialog::backdrop {
+    box-shadow: 0 0 1em rgb(0 0 0 / 0.5);
+
+}
+
+dialog button {
+    position: absolute;
+    top: 23px;
+    right:23px;
+    padding: .5rem 1rem;
+    border: 1px solid  rgb(0 0 0 / 0.1);
+}
+
 
 footer{
     background-color:var(--backgroundcolorDark);

@@ -165,6 +165,7 @@ nav.show {
     display: flex;
     padding: 5px;
     align-items: baseline;
+    justify-content: space-between;
 }
 
 
