@@ -128,31 +128,46 @@ displayCredits.innerHTML = `Credits required ${credits}`;
 
 
 function displayModal (course) {
-    const courseDetails = document.querySelector('#course-details');
-    /*const closeButton = document.createElement('button');
-    const subjectNumber = document.createElement('p');
-    const title = document.createElement('p');
+    const courseDetails = document.querySelector('.course-details');
+    const closeButton = document.createElement('button');
+    const subjectNumber = document.createElement('h2');
+    const title = document.createElement('h3');
     const credits = document.createElement('p');
     const description = document.createElement ('p');
     const certificate = document.createElement('p');
     const techStack = document.createElement('p');
 
-    closeButton.id = "closeModal";
-    closeButton.textContent = "❌";*/
-
     courseDetails.innerHTML = '';
-    courseDetails.innerHTML = `
+    closeButton.textContent = '❌';
+    subjectNumber.innerHTML = `${course.subject} ${course.number}`;
+    title.innerHTML = `${course.title}`;
+    credits.innerHTML = `<strong>Credits</strong>: ${course.credits}`;
+    certificate.innerHTML = `<strong>Certificate</strong>: ${course.certificate}`
+    description.innerHTML = `${course.description}`;
+    techStack.innerHTML = `<strong>Technologies</strong>: ${course.technology.join(', ')}`
+
+    courseDetails.appendChild(closeButton);
+    courseDetails.appendChild(subjectNumber);
+    courseDetails.appendChild(title);
+    courseDetails.appendChild(credits);
+    courseDetails.appendChild(certificate);
+    courseDetails.appendChild(description);
+    courseDetails.appendChild(techStack);
+
+
+    
+    /*courseDetails.innerHTML = `
         <button id="closeModal">❌</button>
         <h2>${course.subject} ${course.number}</h2>
         <h3>${course.title}</h3>
         <p><strong>Credits</strong>: ${course.credits}</p>
         <p>${course.description}</p>
         <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
-    `;
+    `;*/
     
     courseDetails.showModal();
 
-    closeModal.addEventListener("click", () => {
+    closeButton.addEventListener("click", () => {
         courseDetails.close();
     })
 
