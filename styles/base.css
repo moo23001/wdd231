@@ -21,7 +21,9 @@ body {
 #pmimage {
     max-width: 100px;
     height: auto;
+    animation: fadeInLeftToRight 2s;
 }
+
 /* mobile **************************/
 header {
 
@@ -40,6 +42,7 @@ header {
 .mainHeader h1 {
     padding: 10px;
     text-align: center;
+    animation: fadeInLeftToRight 2s;
 }
 h1 {
 	font-size: 2rem;
@@ -272,5 +275,17 @@ footer{
     footer {
         grid-row: 3 / 4;
         grid-column: 1 / 4;
+    }
+}
+
+/************** Animations ****************/
+@keyframes fadeInLeftToRight {
+    0% {
+        opacity: 0;
+        transition: 500ms;
+        
+    }
+    100% {
+        opacity: 1;
     }
 }
