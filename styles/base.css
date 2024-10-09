@@ -197,15 +197,16 @@ nav.show {
 
 /************* Modal ***************/
 dialog {
-    padding: 1em;
-    max-width: 50ch;
-    border: 0;
-    box-shadow: 0 0 1em rgb(0 0 0 / 0.3);
+    border: 1px solid rgba(0 0 0 / 0.1);
+    border-radius: .25rem;
+    padding: 1rem;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 0 3rem rgba(0 0 0 / 0.3);
 }
 
 dialog::backdrop {
-    box-shadow: 0 0 1em rgb(0 0 0 / 0.5);
-
+    background-color: rgba(0 0 0 / 0.5);
 }
 
 dialog button {
@@ -213,7 +214,7 @@ dialog button {
     top: 23px;
     right:23px;
     padding: .5rem 1rem;
-    border: 1px solid  rgb(0 0 0 / 0.1);
+    border: 1px solid  rgba(0 0 0 / 0.1);
 }
 
 
