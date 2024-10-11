@@ -208,6 +208,58 @@ nav.show {
     grid-row: 3 / 4;
 }
 
+/**********CSS Form***********/
+fieldset {
+    margin: 2em 0;
+    padding: 1em 2em;
+    border: solid 1px #ccc;
+    border-radius: 6px;
+    min-width: 200px;
+    
+}
+
+legend {
+    font-size: 1.25em;
+    padding: 0 .25em;
+    color: #999;
+}
+
+label {
+    display: block;
+    margin-top: 1em;
+}
+
+input {
+    padding: .5em;
+    border: solid 1px #999;
+    display: block;
+}
+input[type="email"], input[type="text"] {
+    width: 15em;
+}
+
+input[type="textarea"] {
+    min-height: 8em;
+    min-width: 100%;
+    padding: .5em;
+    border: solid 1px #999;
+}
+
+.membership {
+    margin-bottom: 1em;
+}
+
+.membership p {
+    margin-bottom: 0;
+}
+
+input[type="radio"] {
+    display: inline-block;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+
 /*********Index Footer********/
 footer{
     background-color:var(--backgroundcolorDark);
