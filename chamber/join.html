@@ -12,13 +12,13 @@
         <meta property="og:type" content="website">
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/index.css">
-        <link rel="stylesheet" href="styles/join.css">
         <link rel="icon" href="images/favicon.ico">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
         <script defer src="scripts/getdates.js"></script>
         <script defer src="scripts/menu.js"></script>
+        <script defer src="scripts/join.js"></script>
         
     </head>
     <body>
@@ -37,9 +37,9 @@
                 </ul>
             </nav>
         </header>
-        <main>
-            <h1>Form</h1>
-            <form method="get" action="thanks.html" class="form"></form>
+        <main id="formMain">
+            <form method="get" action="thankyou.html" class="form" target="_self">
+                <h1>Form</h1>
                 <fieldset class="rep">
                     <legend>Business/Org Representative</legend>
                     <label>First Name <input type="text" name="first" required autocomplete="name"></label>
@@ -56,15 +56,20 @@
                 <fieldset>
                     <legend>Select Membership Level</legend>
                     <div class="membership">
-                        <label><input type="radio" id="np" name="np" required>NP Membership</label>
-                        <label><input type="radio" id="bronze" name="bronze" required>Bronze Membership</label>
-                        <label><input type="radio" id="silver" name="silver" required>Silver Membership</label>
-                        <label><input type="radio" id="gold" name="gold" required>Bronze Membership</label>
+                        <label><input type="radio" id="np" name="membership" value="NP" required>NP Membership</label>
+                        <label><input type="radio" id="bronze" name="membership" value="Bronze" required>Bronze Membership</label>
+                        <label><input type="radio" id="silver" name="membership" value="Silver" required>Silver Membership</label>
+                        <label><input type="radio" id="gold" name="membership" value="Gold" required>Gold Membership</label>
                     </div>
                     
                 </fieldset>
-                
-                <button type="submit">Join Now</button>
+                <input type="hidden" name="timestamp" id="timeStamp">
+                <button type="submit" id="joinNow">Join Now</button>
+            </form>
+            <div id="membershipCards">
+                <h1>Membership Information</h1>
+            </div>
+            <dialog class="learnMore"></dialog>
         </main>
         <footer>
             <p>&copy; <span id="currentyear"></span> Pedro Moo - Monterrey, Mexico</p>

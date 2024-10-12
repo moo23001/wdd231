@@ -1,0 +1,39 @@
+[
+    {
+        "name": "Non-Profit Membership",
+        "benefits": [
+            "Access to community events",
+            "Networking opportunities with local businesses",
+            "Free participation in Chamber of Commerce committees"
+        ]
+    },
+    {
+        "name": "Bronze Membership",
+        "benefits": [
+            "Access to Chamber directory",
+            "Invitations to exclusive events",
+            "Discounts on event participation",
+            "Basic promotion through Chamber newsletters"
+        ]
+    },
+    {
+        "name": "Silver Membership",
+        "benefits": [
+            "All benefits of Bronze Membership",
+            "Featured listing in Chamber directory",
+            "Opportunities to host Chamber events",
+            "Expanded promotional opportunities through social media"
+        ]
+    },
+    {
+        "name": "Gold Membership",
+        "benefits": [
+            "All benefits of Silver Membership",
+            "Featured listing in Chamber's page Spotlight",
+            "Priority sponsorship opportunities",
+            "Personalized business support services",
+            "Premium visibility in Chamber publications and events",
+            "Exclusive access to VIP networking opportunities"
+        ]
+    }
+]
