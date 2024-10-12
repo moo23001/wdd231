@@ -261,14 +261,44 @@ input[type="radio"] {
 input [type="radio"] {
     margin-left: 1.5em;
     margin-right: 0;
-
 }
 
-
-#formMain {
-    display: grid;
-    grid-template-columns: auto auto;
+#joinNow {
+    width: 96%;
+    margin-left: 2%;
+    padding: 5px;
+    background-color: var(--backgroundcolorDark);
+    color: var(--fontcolorLight);
+    border-radius: 6px;
+    
 }
+
+.membershipCard {
+    text-align: center;
+    padding: 2em;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.membershipCard p:first-of-type {
+    margin-top: 1em;
+    background-color: var(--backgroundcolorDark);
+    color: var(--fontcolorLight);
+    padding: .5em;
+    margin-left: 2em;
+    margin-right: 2em;
+    border-radius: 5px;
+    min-width: 200px;
+}
+.membershipCard p:first-of-type:hover {
+    cursor: pointer;
+    background-color: var(--secondarycolor);
+    color: var(--fontcolorDark);
+    font-weight: bold;
+    transition: .2s;
+}
+
 
 
 /*********Index Footer********/
@@ -313,6 +343,10 @@ footer{
     #home {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
+    }
+    #formMain {
+        display: grid;
+        grid-template-columns: auto auto;
     }
 
 }
