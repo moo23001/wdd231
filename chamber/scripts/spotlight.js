@@ -8,7 +8,15 @@ async function getMemberData() {
         if (response.ok) {
             const data = await response.json();
             /*console.log(data);*/
-            displayMembers(data);
+            let rdata = [];
+            data.forEach (member => {
+                if (member.membershipLevel > 2){
+                    rdata.push(member);
+                }
+            })
+
+            shuffleArray(rdata);
+            displayMembers(rdata);
         } else {
             console.error(`HTTP error! status: ${response.status}`);
         }
@@ -16,11 +24,16 @@ async function getMemberData() {
         console.error(`Fetch error: ${error}`);
     }
 }
-
+function shuffleArray(array) {
+    for (let i = array.length - 1; i >= 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
 
 const displayMembers = (members) => {
     members.forEach(member => {
-        if (member.membershipLevel > 2) {
+        
             let card = document.createElement('section');
             let memberName = document.createElement('h3');
             let logo = document.createElement('img');
@@ -52,7 +65,7 @@ const displayMembers = (members) => {
             card.appendChild(webAddress);
     
             cards.appendChild(card);
-        }
+        
        
     });
   }
