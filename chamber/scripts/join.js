@@ -1,6 +1,6 @@
 const url = './data/membership_benefits.json';
 const cards = document.querySelector('#membershipCards');
-const currentUrl = window.location.href;
+
 
 
 async function getMembershipData() {
@@ -45,7 +45,7 @@ function displayModal (membership) {
     benefitsList.innerHTML = '';
     closeButton.textContent = '❌';
     const benefits = membership.benefits.map(benefit => `<li>${benefit}</li>`).join('');
-    benefitsList.innerHTML = `<ul>${benefits}<ul>`;
+    benefitsList.innerHTML = `<ul>${benefits}</ul>`;
 
     learnMore.appendChild(closeButton);
     learnMore.appendChild(benefitsList);
@@ -60,25 +60,3 @@ function displayModal (membership) {
 
 const currentDateTime = new Date();
 document.querySelector('#timeStamp').value = currentDateTime;
-const urlAll = currentUrl.split('?');
-let formData = urlAll[1].split('&');
-
-function show(cup) {
-    formData.forEach((element) => {
-        if (element.startsWith(cup)) {
-            result = element.split('=')[1].replace("%40","@");
-        
-        }
-    })
-    return (result);
-}
-
-const showInfo = document.querySelector('.thankYou');
-showInfo.innerHTML = `
-<h1>Thank you for joining</h1>
-<h3>New Member<h3>
-<p>Name: ${show("first")} ${show("last")}</p>
-<p>Phone: ${show("phone")}</p>
-<p>Email: ${show("email")}</p>
-
-`;
