@@ -283,8 +283,9 @@ input [type="radio"] {
     border: 1px solid #ccc;
     border-radius: 5px;
     animation: appear 1s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+
+    /*animation-timeline: view();
+    animation-range: entry 0% cover 40%;*/
 }
 
 .membershipCard p:first-of-type {
