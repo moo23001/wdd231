@@ -220,6 +220,10 @@ fieldset {
     min-width: 200px;
     
 }
+:required{
+    border-bottom: 2px solid red;
+
+}
 
 legend {
     font-size: 1.25em;
@@ -395,11 +399,11 @@ footer{
 @keyframes appear {
     from {
         opacity: 0;
-        scale: 0.4;
+        
     }
     to {
         opacity: 1;
-        scale: 1;
+
     }
     
 }
