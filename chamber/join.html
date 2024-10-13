@@ -44,8 +44,8 @@
                     <legend>Applicant's Info</legend>
                     <label>First Name <input type="text" name="first" required autocomplete="name"></label>
                     <label>Last Name <input type="text" name="last" required autocomplete="name"></label>
-                    <label>Organization Title <input type="text" name="org" required autocomplete="organization-title"></label>
-                    <label>Email <input type="email" name="email" required autocomplete="email"></label>
+                    <label>Organization Title <input type="text" name="org" required autocomplete="organization-title" pattern="[A-Za-z]+$"></label>
+                    <label>Email <input type="email" name="email" required autocomplete="email" placeholder="myname@email.com"></label>
                     <label>Phone <input type="tel" name="phone" required autocomplete="tel-area-code"></label>
                 </fieldset>
                 <fieldset>

@@ -15,11 +15,12 @@ function show(cup) {
 const showInfo = document.querySelector('.thankYou');
 showInfo.innerHTML = `
 <h1>Thank you for joining</h1>
-<h2>New Member</h2>
+<fieldset>
+<legend>New Member</legend>
 <p>Name: <strong>${show("first")} ${show("last")}</strong></p>
 <p>Phone: <strong>${show("phone")}</strong></p>
 <p>Email: <strong>${show("email")}</strong></p>
 <p>Business/Org name: <strong>${show("business")}</strong></p>
 <p>${show("timeStamp")}</p>
-
+</fieldset>
 `;
