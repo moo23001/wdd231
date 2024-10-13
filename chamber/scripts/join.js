@@ -25,7 +25,7 @@ function displayMembershipCards (membership) {
     membership.map((section) => {
         const mCard = document.createElement('section');
         mCard.innerHTML = `
-        <h3>${section.name}</h3>
+        <h2>${section.name}</h2>
         <p>Learn More<p>
     `;
     mCard.classList.add('membershipCard')

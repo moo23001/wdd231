@@ -206,6 +206,7 @@ dialog {
     width: 90%;
     max-width: 600px;
     box-shadow: 0 0 3rem rgba(0 0 0 / 0.3);
+    align-items: center;
 }
 
 dialog::backdrop {

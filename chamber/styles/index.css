@@ -21,6 +21,9 @@ header {
 .mainHeader {
     display: flex;
 }
+.mainHeader h1 {
+    padding-right: 1.5em;
+}
 
 #logo {
 	min-width: 100px;
@@ -221,7 +224,7 @@ fieldset {
 legend {
     font-size: 1.25em;
     padding: 0 .25em;
-    color: #999;
+    color: var(--fontcolorDark);
 }
 
 label {
@@ -238,7 +241,7 @@ input[type="email"], input[type="text"] {
     width: 15em;
 }
 
-input[type="textarea"] {
+textarea {
     min-height: 8em;
     min-width: 100%;
     padding: .5em;
@@ -276,7 +279,7 @@ input [type="radio"] {
 .membershipCard {
     text-align: center;
     padding: 2em;
-    margin: 10px;
+    margin: 2em 0;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -298,6 +301,32 @@ input [type="radio"] {
     font-weight: bold;
     transition: .2s;
 }
+
+dialog {
+    display: block;
+    border: 1px solid rgba(0 0 0 / 0.1);
+    border-radius: .25rem;
+    padding: 1rem;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 0 3rem rgba(0 0 0 / 0.3);
+}
+
+dialog::backdrop {
+    background-color: rgba(0 0 0 / 0.5);
+}
+
+dialog button {
+    position: absolute;
+    top: 23px;
+    right:23px;
+    padding: .5rem 1rem;
+    border: 1px solid  rgba(0 0 0 / 0.1);
+}
+dialog > ul {
+    padding: 5px;
+}
+
 
 
 

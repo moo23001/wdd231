@@ -15,7 +15,7 @@ function show(cup) {
 const showInfo = document.querySelector('.thankYou');
 showInfo.innerHTML = `
 <h1>Thank you for joining</h1>
-<h3>New Member</h3>
+<h2>New Member</h2>
 <p>Name: <strong>${show("first")} ${show("last")}</strong></p>
 <p>Phone: <strong>${show("phone")}</strong></p>
 <p>Email: <strong>${show("email")}</strong></p>
