@@ -1,0 +1,153 @@
+:root {
+    --primaryColor: #8f3fa3;
+    --secondaryColor: #BA55D3;
+    --backgroundColorLight: #ff6347;
+    --backgroundcolorDark: #4B0082;
+    --typefaceColor1: #FFFFE0;
+    --typefaceColor2: white;
+    --fontFamily: "Quicksand";
+    
+}
+
+*{
+    font-family: var(--fontFamily);
+}
+
+header {
+    display: block;
+    width: 96%;
+    padding: 20px;
+    background-color: var(--primaryColor);
+    color: var(--typefaceColor1);
+
+}
+
+header h1 {
+    text-align: center;
+}
+
+.navigation {
+    display: flex;
+	list-style: none;
+	margin: 0 auto;
+	max-width: 900px;
+    
+}
+
+.navigation li {
+    display: block;
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+.navigation a {
+	padding: 0.75rem;
+	text-align: center;
+	text-decoration: none;
+	font-weight: 700;
+	transition: 0.5s;
+	font-size: clamp(1rem, 2vmin, 1.5rem);
+    color: var(--typefaceColor2);
+    border-radius: 10px;
+    
+}
+.navigation a:hover, navigation a:active {
+	color: #124076;
+	background-color: #FFC374;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+
+}
+
+section h2:first-child {
+    text-align: center;
+}
+
+#colorSchema {
+    grid-column: 1 / 4;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    
+    
+}
+
+td {
+    height: 200px;
+    width: 25%;
+}
+
+#primary {
+    background-color: var(--primaryColor);
+    color: var(--typefaceColor2);
+}
+
+#secondary {
+    background-color: var(--secondaryColor);
+    color: var(--typefaceColor2);
+}
+
+#backgroundColor {
+    background-color: var(--backgroundcolorDark);
+    color: var(--typefaceColor2);
+}
+
+#typefaceColor {
+    background-color: var(--backgroundcolorDark);
+    color: var(--typefaceColor2);
+}
+
+#typography {
+    grid-column: 1 / 4;
+}
+
+#h1Typography, #h2Typography, #pTypography, #pTypeface{
+    font-family: var(--fontFamily);
+}
+
+#h1Typography {
+    font-weight: 300;
+    font-size: xx-large;
+}
+
+#h2Typography {
+    font-weight: 500;
+    font-size: larger;
+}
+
+#pTypography {
+    font-weight: 400;
+    font-size: medium;
+}
+
+/*--------------------- Wireframes page -----------------------*/
+
+.wireframeMain {
+    grid-column: 1 / 4;
+    display: block;
+    text-align: center;
+}
+
+.wireframeMain img {
+    display: block;
+    width: auto;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primaryColor);
+    color: var(--typefaceColor1);
+}
+
+
