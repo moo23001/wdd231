@@ -338,7 +338,7 @@ dialog > ul {
 /************ Discovery ***********/
 .mainDiscover {
     display: grid;
-    grid-template-columns: 1.5fr 2fr;
+    grid-template-columns: 1fr 2fr;
     column-gap: 10px;
 }
 .cityCard {
