@@ -1,0 +1,106 @@
+{
+    "city": "Monterrey",
+    "country": "Mexico",
+    "population": 4800000,
+    "gdp": {
+        "amount": "140 billion USD",
+        "growth_rate": "4.3%"
+    },
+    "sectors": [
+        {
+            "sector": "Manufacturing",
+            "description": "Monterrey is known for its strong manufacturing base, including automotive, steel, and electronics industries.",
+            "key_companies": [
+                "Ternium",
+                "Kia Motors",
+                "Cemex"
+            ]
+        },
+        {
+            "sector": "Technology",
+            "description": "The city is becoming a tech hub, with a growing number of software development and IT service companies.",
+            "key_companies": [
+                "Softtek",
+                "Neoris"
+            ]
+        },
+        {
+            "sector": "Logistics",
+            "description": "Due to its proximity to the U.S. border and strategic location, Monterrey is a logistics powerhouse.",
+            "key_companies": [
+                "DHL",
+                "FedEx",
+                "Kuehne + Nagel"
+            ]
+        }
+    ],
+    "infrastructure": {
+        "airports": 2,
+        "ports_nearby": [
+            "Altamira",
+            "Tampico"
+        ],
+        "highways": "Extensive highway system connecting to the U.S. and other key cities in Mexico"
+    },
+    "business_environment": {
+        "ease_of_doing_business_rank": 50,
+        "tax_incentives": [
+            "R&D tax credits",
+            "Free Trade Agreements with over 50 countries",
+            "Special Economic Zones (SEZs)"
+        ],
+        "labor_force": {
+            "total": 2200000,
+            "skilled_percentage": "45%"
+        }
+    },
+    "events": [
+        {
+            "name": "Monterrey Investment Summit",
+            "date": "November 2024",
+            "description": "An annual summit focused on attracting foreign investment in Monterrey's key sectors."
+        },
+        {
+            "name": "Innovation and Technology Expo",
+            "date": "March 2025",
+            "description": "A major event showcasing the latest innovations in technology and the startup ecosystem in Monterrey."
+        },
+        {
+            "name": "Industrial Expo Monterrey",
+            "date": "August 2025",
+            "description": "An event that brings together key players in the manufacturing and industrial sectors."
+        }
+    ],
+    "education": {
+        "top_universities": [
+            {
+                "name": "Tecnol\u00f3gico de Monterrey",
+                "ranking": "Top 5 in Latin America",
+                "focus": "Engineering, Business, and Technology"
+            },
+            {
+                "name": "Universidad Aut\u00f3noma de Nuevo Le\u00f3n",
+                "ranking": "Top 10 in Mexico",
+                "focus": "Research and Medicine"
+            }
+        ]
+    },
+    "quality_of_life": {
+        "cost_of_living_index": 55.3,
+        "safety_index": 60,
+        "climate": "Warm semi-arid"
+    },
+    "foreign_direct_investment": {
+        "total_fdi": "9.8 billion USD",
+        "key_countries": [
+            "USA",
+            "Germany",
+            "Japan"
+        ],
+        "focus_industries": [
+            "Automotive",
+            "Aerospace",
+            "Electronics"
+        ]
+    }
+}
