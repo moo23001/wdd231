@@ -18,6 +18,7 @@
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
         <script defer src="scripts/getdates.js"></script>
         <script defer src="scripts/menu.js"></script>
+        <script defer src="scripts/discover.js"></script>
 
 
         
@@ -39,24 +40,40 @@
             </nav>
         </header>
         <main class="mainDiscover">
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+              </div>
             <div class="infoColumn">
                 <h1>Fact sheet</h1>
 
             </div>
             <div class="pictureColumn">
                     <h1>Places to visit</h1>
-                    <img src="images/rsz_macroplaza.webp" alt="Macroplaza Monterrey Mexico" width="400" height="200" loading="lazy">
-                    <caption>Macroplaza</caption>
-                    <img src="images/fundidora.webp" alt="fundidora Park Monterey Mexico" width="400" height="200" loading="lazy">
-                    <caption>Fundidora Park</caption>
-                    <img src="images/paseo-san-pedro-centro.webp" alt="Paseo San Pedro Mall" width="400" height="200">
-                    <caption>Paseo San Pedro</caption>
-                    <img src="images/Museo-de-Arte-Contemporaneo-Marco.webp" alt="MARCP Museum Monterrey Mexico" width="400" height="200" loading="lazy">
-                    <caption>MARCO Museum</caption>
-                    <img src="images/cintermex.webp" alt="Cintermex Business Center Monterrey Mexico" width="400" height="200" loading="lazy">
-                    <caption>Cintermex</caption>
-                    <img src="images/parque-ecologico-chipinque.webp" alt="Chipinque Park Mexico" width="400" height="200" loading="lazy">
-                    <caption>Chipinque</caption>
+                    <div class="picContainer">
+                        <img class="discoverImg" src="images/rsz_macroplaza.webp" alt="Macroplaza Monterrey Mexico" width="400" height="200" loading="lazy">
+                        <div class="overlay">Macroplaza</div>
+                    </div>
+                    <div class="picContainer">
+                        <img class="discoverImg" src="images/fundidora.webp" alt="fundidora Park Monterey Mexico" width="400" height="200" loading="lazy">
+                        <div class="overlay">Fundidora Park</div>
+                    </div>
+                    <div class="picContainer">
+                        <img class="discoverImg" src="images/paseo-san-pedro-centro.webp" alt="Paseo San Pedro Mall" width="400" height="200">
+                        <div class="overlay">Paseo San Pedro Mall</div>
+                    </div>
+                    <div class="picContainer">
+                        <img class="discoverImg" src="images/Museo-de-Arte-Contemporaneo-Marco.webp" alt="MARCP Museum Monterrey Mexico" width="400" height="200" loading="lazy">
+                        <div class="overlay">MARCO Museum</div>
+                    </div>
+                    <div class="picContainer">
+                        <img class="discoverImg" src="images/cintermex.webp" alt="Cintermex Business Center Monterrey Mexico" width="400" height="200" loading="lazy">
+                        <div class="overlay">Cintermex Business Center</div>
+                    </div>
+                    <div class="picContainer">
+                        <img class="discoverImg" src="images/parque-ecologico-chipinque.webp" alt="Chipinque Park Mexico" width="400" height="200" loading="lazy">
+                        <div class="overlay">Chipinque Park</div>
+                    </div>
+
             </div>
         </main>
         <footer>
@@ -64,5 +81,5 @@
             <p id="lastModified"></p>
         </footer>
     </body>
-    <script src="scripts/discover.js"></script>
+
 </html>

@@ -2,7 +2,7 @@ const url = './data/monterrey_investor_info.json';
 const cards = document.querySelector('.infoColumn');
 let userDates = getDates() || [];
 getDates();
-setDates();
+
 
 async function getCityData() {
     try {
@@ -64,19 +64,19 @@ const displayCityInfo = (cityData) => {
 }
 
 const theDateToday = new Date();
-if (userDates[0] == '') {
+if (userDates[0] == null) {
     userDates[0] = theDateToday;
-    userDates[1] = userDates[0].getTime() - theDateToday.now();
-    userDates[2]= "Welcome! Let us know if you have any questions.";
-} else if (userDates[1] < 24 ) {
+    userDates[1] = Math.floor((Date.now() - theDateToday.getTime()) / (1000 * 60 * 60 * 24));
+    userDates[2] = "Welcome! Let us know if you have any questions.";
+} else if (userDates[1] < 1 ) {
     userDates[2] = "Back so soon! Awesome!"
 } else {
     userDates[2] = `You last visited ${userDates[1]} days ago`;
 }
 
 function setDates (userDatesData) {
-    userDates.push(userDatesData)
-    localStorage.setItem('userDatesLocal', JSON.stringify(userDates));
+    
+    localStorage.setItem('userDatesLocal', JSON.stringify(userDatesData));
     
   }
 
@@ -84,5 +84,8 @@ function setDates (userDatesData) {
 function getDates() {
     return JSON.parse(localStorage.getItem('userDatesLocal')) || [];
   }
-
-  window.alert(userDates[2]);
+  setDates(userDates);
+const alert = document.querySelector('.alert');
+const message = document.createElement('p');
+message.innerHTML = userDates[2];
+alert.appendChild(message);
