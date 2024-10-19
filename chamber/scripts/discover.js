@@ -1,13 +1,14 @@
 const url = './data/monterrey_investor_info.json';
 const cards = document.querySelector('.infoColumn');
-
+let userDates = getDates() || [];
+getDates();
+setDates();
 
 async function getCityData() {
     try {
         const response = await fetch(url);
         if (response.ok) {
             const data = await response.json();
-            console.log(data);
             displayCityInfo(data);
         } else {
             console.error(`HTTP error! status: ${response.status}`);
@@ -25,12 +26,10 @@ const displayCityInfo = (cityData) => {
     const cityGdpRate = document.createElement('p');
 
     cityName.innerHTML = cityData.city;
-    cityPopulation.innerHTML = `Population: ${cityData.population}`;
-    cityGdpAmount.innerHTML = `City's GDP: ${cityData.gdp.amount}`;
-    cityGdpRate.innerHTML = `Growth Rate: ${cityData.gdp.growth_rate}`;
+    cityPopulation.innerHTML = `<strong>Population:</strong> ${cityData.population.toLocaleString()}`;
+    cityGdpAmount.innerHTML = `<strong>City's GDP:</strong> ${cityData.gdp.amount}`;
+    cityGdpRate.innerHTML = `<strong>Growth Rate:</strong> ${cityData.gdp.growth_rate}`;
     
-
-
     const cityCard = document.createElement('section');
 
     cityCard.appendChild(cityName);
@@ -38,10 +37,52 @@ const displayCityInfo = (cityData) => {
     cityCard.appendChild(cityGdpAmount);
     cityCard.appendChild(cityGdpRate);
     cityCard.classList.add('cityCard')
-
     cards.appendChild(cityCard);
-    
+
+    cityData.sectors.forEach(element => {
+        const sectorCard = document.createElement('section');
+        const keyCompanies = document.createElement('ul');
+        element.key_companies.forEach(company => {
+            const item = document.createElement('li');
+            item.innerHTML= company;
+            keyCompanies.appendChild(item);
+                      
+        })
 
 
+        sectorCard.innerHTML = `
+        <h2>${element.sector}</h2>
+        <p>${element.description}</p>
+        <p><strong>Key Companies:</strong></p>
+        
+        `
+        sectorCard.appendChild(keyCompanies);
+        sectorCard.classList.add('cityCard');
+        cards.appendChild(sectorCard);
+    });
 
 }
+
+const theDateToday = new Date();
+if (userDates[0] == '') {
+    userDates[0] = theDateToday;
+    userDates[1] = userDates[0].getTime() - theDateToday.now();
+    userDates[2]= "Welcome! Let us know if you have any questions.";
+} else if (userDates[1] < 24 ) {
+    userDates[2] = "Back so soon! Awesome!"
+} else {
+    userDates[2] = `You last visited ${userDates[1]} days ago`;
+}
+
+function setDates (userDatesData) {
+    userDates.push(userDatesData)
+    localStorage.setItem('userDatesLocal', JSON.stringify(userDates));
+    
+  }
+
+  //Get data from localstorage
+function getDates() {
+    return JSON.parse(localStorage.getItem('userDatesLocal')) || [];
+  }
+
+  window.alert(userDates[2]);
