@@ -45,7 +45,7 @@ function displayModal (membership) {
     benefitsList.innerHTML = '';
     closeButton.textContent = '❌';
     const benefits = membership.benefits.map(benefit => `<li>${benefit}</li>`).join('');
-    benefitsList.innerHTML = `<ul>${benefits}</ul>`;
+    benefitsList.innerHTML = `${benefits}`;
 
     learnMore.appendChild(closeButton);
     learnMore.appendChild(benefitsList);
