@@ -1,0 +1,58 @@
+@media only screen and (min-width: 40em) {
+	:root {
+        --primaryColor: #8f3fa3;
+        --secondaryColor: #BA55D3;
+        --backgroundColorLight: #ff6347;
+        --backgroundcolorDark: #4B0082;
+        --typefaceColor1: #FFFFE0;
+        --typefaceColor2: white;
+        --fontFamily: "Quicksand";
+        --pFontWeight: 400;
+        --h2FontWeight: 500;
+        --h1FontWeight: 300;
+    }
+    
+    .navigation {
+		display: flex;
+	}
+	.navigation li {
+		display: block;
+		flex: 1 1 100%;
+	}
+	.navigation a {
+		text-align: center;
+	}
+	#menu {
+		display: none;
+	}
+    header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .homeContainer {
+        margin: 0 auto;
+        display: grid;
+        max-width: 900px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr auto;
+        gap: 10px;
+        padding-bottom: 50px;
+    }
+    #hero {
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+    }
+    .orderTodayBox {
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        text-align: center;
+        align-content: start;
+        margin-bottom: 20px;
+    }
+    #orderToday {
+        font-size: xx-large;
+
+    }
+    
+}

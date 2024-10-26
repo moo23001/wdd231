@@ -1,0 +1,248 @@
+:root {
+    --primaryColor: #8f3fa3;
+    --secondaryColor: #BA55D3;
+    --backgroundColorLight: #ff6347;
+    --backgroundcolorDark: #4B0082;
+    --typefaceColor1: #FFFFE0;
+    --typefaceColor2: white;
+    --fontFamily: "Quicksand";
+    --pFontWeight: 400;
+    --h2FontWeight: 500;
+    --h1FontWeight: 300;
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: var(--fontFamily);
+}
+
+
+header {
+	background-color: var(--primaryColor);
+    align-items: center;
+	justify-content: center;
+	padding: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+    color: var(--typefaceColor1);
+}
+.mainHeader {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+}
+
+#menu {
+	display: block;
+	font-size: 2rem;
+	font-weight:700;
+	text-decoration: none;
+	padding: .5rem .75rem;
+	color: #000;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #EEEEEE;
+}
+
+#menu::before {
+	content: "≡";
+}
+
+.navigation {
+	list-style: none;
+	margin: 0 auto;
+	max-width: 900px;
+}
+
+.navigation li {
+	display: none;
+	border-radius: 10px;
+}
+.navigation a {
+	display: block;
+	padding: 0.75rem;
+	text-align: left;
+	text-decoration: none;
+    width: 100%;
+	font-weight: 700;
+	transition: 0.5s;
+	font-size: clamp(1rem, 2vmin, 1.5rem);
+    color: var(--typefaceColor1);
+	
+}
+.navigation a:hover, .navigation a:active {
+	color: var(--typefaceColor1);
+	background-color: var(--backgroundColorLight);
+
+	
+}
+.show li {
+	display: block;
+}
+
+body p {
+	font-size: .8rem;
+}
+#menu.show::before {
+	content: "x";
+}
+
+.homeContainer {
+    display: block;
+    padding: 10px;
+
+}
+.orderTodayBox{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#orderToday {
+    background-color: var(--backgroundcolorDark);
+    font-size: medium;
+    color: var(--typefaceColor1);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#leftSection, #rightSection {
+    padding: 10px;
+    border: solid 2px var(--backgroundcolorDark);
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+}
+
+#leftSection p, #rightSection p {
+    text-align: justify;
+    padding: 20px
+
+}
+
+.orderButton {
+    text-decoration: none;
+    padding: 10px;
+    background-color: var(--backgroundcolorDark);
+    color: var(--typefaceColor1);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.galleryContainer {
+    margin: 0 auto;
+    display: grid;
+    max-width: 900px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 10px;
+    padding-bottom: 50px;
+}
+
+.orderNow {
+    margin-top: 20px;
+    background-color: var(--primaryColor);
+    color: var(--typefaceColor1);
+    width: 96%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+img {
+	width: 100%;
+    height: auto;
+}
+
+/*------- Cards -------*/
+.card {
+	padding: 5px;
+	border: 1px solid var(--backgroundcolorDark);
+	box-shadow: .1rem .1rem .3rem .1rem #00000073;
+
+}
+.card a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*------- Form -------*/
+.wf1 {
+    margin-left: 2%;
+    margin-right: 2%;
+
+}
+
+.wf1 fieldset {
+    margin: 2rem 0;
+    border-radius: 6px;
+    padding: .5rem 2%;
+}
+
+.wf1 legend {
+    color: var(--backgroundcolorDark);
+    padding: .5rem;
+    font-weight: 700;
+}
+
+.wf1 label {
+    display: block;
+    padding-top: 1rem;
+    color: var(--backgroundcolorDark);
+}
+
+.wf1 input[type="text"],
+.wf1 input[type="email"],
+.wf1 textarea,
+.wf1 input[type="submit"] {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    padding: .5rem;
+}
+
+.wf1 input[type="submit"] {
+    border: none;
+    color: var(--typefaceColor1);
+    background-image: linear-gradient(var(--backgroundcolorDark),var(--secondaryColor));
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: var(--backgroundcolorDark);
+}
+
+/*------- Thank you ------*/
+.thankyou {
+    text-align: center;
+    align-content: center;
+    height: 250px;
+    background-color: var(--backgroundcolorDark);
+    color: var(--typefaceColor1);
+}
+
+.thankyou h1 {
+    font-weight: var(--h1FontWeight);
+}
+
+.thankyou h2 {
+    font-weight: var(--h2FontWeight);
+}
+
+
+
+/*------- Footer -------*/
+footer {
+    display: block;
+    margin: 0 auto;
+    background-color: var(--primaryColor);
+    color: var(--typefaceColor1);
+    padding: 10px;
+    text-align: center;
+    font-weight: var(--pFontWeight);
+}
