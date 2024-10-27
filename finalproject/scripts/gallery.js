@@ -1,4 +1,5 @@
 const url = './data/products.json';
+let cart = [];
 
 async function getProductData() {
     try {
@@ -35,11 +36,14 @@ function productCards(filteredProductArray) {
 	productCardImg.setAttribute("src", product.productImg)
 	productCardImg.setAttribute("alt", `${product.productName}`)
 	productCardImg.setAttribute("loading", "lazy")
+    productCardImg.setAttribute("width",300);
+    productCardImg.setAttribute("height",300)
 
     //Give attributes Order Now button
-    orderNowButton.setAttribute("href", "contactus.html");
+    //*orderNowButton.setAttribute("href", "contactus.html");
     orderNowButton.textContent = "Order Now"
     orderNowButton.classList.add("orderNow");
+    orderNowButton.addEventListener("click", () => addToCart(product.productName, product.productPrice));
 
 
 	//Assign content
@@ -55,9 +59,59 @@ function productCards(filteredProductArray) {
 	pCard.appendChild(productCardDescription);
     pCard.appendChild(orderNowButton);
 
-
+    
 	const productCardsFinal = document.querySelector('.galleryContainer');
 	productCardsFinal.appendChild(pCard);
 
 	})
+
+
+}
+
+function addToCart(itemName, itemPrice) {
+    const quantity = parseInt(prompt(`Enter quantity for ${itemName}:`), 10);
+    if (!quantity || quantity <= 0) return; // Exit if quantity is invalid
+
+    const existingItem = cart.find(item => item.name === itemName);
+    if (existingItem) {
+        existingItem.quantity += quantity;
+    } else {
+        cart.push({ name: itemName, price: itemPrice, quantity: quantity });
+        console.log(cart);
+    }
+
+    if (confirm("Item added to cart. Continue shopping?")) {
+        return;
+    } else {
+        displayUpdatedCart();
+    }
+}
+
+function displayUpdatedCart (){
+    const cartDialog = document.querySelector(".cart");
+    const closeButton = document.createElement('button');
+    const gTotal = document.createElement('p');
+    
+
+    cartDialog.innerHTML = "";
+    closeButton.textContent = '❌';
+    cartDialog.appendChild(closeButton);
+    
+    closeButton.addEventListener("click", () => {
+        cartDialog.close()
+    })
+
+    let grandTotal = 0;
+    cart.forEach(item => {
+        const total = item.price * item.quantity;
+        grandTotal += total;
+        cartDialog.innerHTML += `
+        <p>${item.name} - $${item.price} x ${item.quantity} = $${total}</p>`;
+
+    });
+    gTotal.innerHTML = `Grant Total <strong>${grandTotal}</strong>`;
+    cartDialog.appendChild(gTotal);
+
+    cartDialog.showModal();
+
 }
