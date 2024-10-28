@@ -26,7 +26,7 @@ function productCards(filteredProductArray) {
 	//Create the temple card elements
 	const pCard = document.createElement("div");
 	pCard.classList = 'card';
-	const productCardName = document.createElement('h3');
+	const productCardName = document.createElement('h2');
 	const productCardPrice = document.createElement('p');
 	const productCardDescription = document.createElement('p');
 	const productCardImg = document.createElement('img');
