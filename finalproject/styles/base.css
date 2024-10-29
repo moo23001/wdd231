@@ -193,9 +193,15 @@ dialog button {
     right:23px;
     padding: .5rem 1rem;
     border: 1px solid  rgba(0 0 0 / 0.1);
+    cursor: pointer;
 }
 
-/*------- Form -------*/
+dialog p {
+    padding-bottom: 10px;
+}
+
+
+/*------- Contact Us Form -------*/
 .wf1 {
     margin-left: 2%;
     margin-right: 2%;

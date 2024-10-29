@@ -89,17 +89,11 @@ function addToCart(itemName, itemPrice) {
 
 function displayUpdatedCart (){
     const cartDialog = document.querySelector(".cart");
-    const closeButton = document.createElement('button');
-    const gTotal = document.createElement('p');
-    
-
     cartDialog.innerHTML = "";
+
+    const closeButton = document.createElement('button');
     closeButton.textContent = '❌';
-    cartDialog.appendChild(closeButton);
     
-    closeButton.addEventListener("click", () => {
-        cartDialog.close()
-    })
 
     let grandTotal = 0;
     cart.forEach(item => {
@@ -109,9 +103,44 @@ function displayUpdatedCart (){
         <p>${item.name} - $${item.price} x ${item.quantity} = $${total}</p>`;
 
     });
-    gTotal.innerHTML = `Grant Total <strong>${grandTotal}</strong>`;
+
+    const gTotal = document.createElement('p');
+    const confirmOrder = document.createElement('a');
+
+    gTotal.innerHTML = `Grant Total <strong>$${grandTotal}</strong>`;
+    confirmOrder.setAttribute('href', 'orderconfirmation.html');
+    confirmOrder.textContent = "Confirm Order";
+
+
+
     cartDialog.appendChild(gTotal);
+    cartDialog.appendChild(closeButton);
+    cartDialog.appendChild(confirmOrder);
 
     cartDialog.showModal();
+    closeButton.addEventListener("click", () => {
+        console.log('Clicked');
+        cartDialog.close();
+    })
+    confirmOrder.addEventListener("click", () => {
+        const orderDate = new Date();
+        cart.unshift(orderDate);
+        const orderNumber = `${orderDate.getFullYear()}${orderDate.getMonth()}${orderDate.getDay()}${orderDate.getHours()}${orderDate.getMinutes()}${orderDate.getSeconds()}`;
+        cart.unshift(orderNumber);
+        setCartData(cart);
+    })
+
+
 
 }
+
+//Set data in local storage
+function setCartData (cartData) {
+    localStorage.setItem('cartRequests', JSON.stringify(cartData));
+    
+    //console.log(formAnswers)
+  }
+  //Get data from localstorage
+  function getCartData() {
+    return JSON.parse(localStorage.getItem('cartRequests')) || [];
+  }
