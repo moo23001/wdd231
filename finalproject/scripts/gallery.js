@@ -76,7 +76,7 @@ function addToCart(itemName, itemPrice) {
     if (existingItem) {
         existingItem.quantity += quantity;
     } else {
-        cart.push({ name: itemName, price: itemPrice, quantity: quantity });
+        cart.push({ name: itemName, price: itemPrice, quantity: quantity, total: itemPrice * quantity });
         console.log(cart);
     }
 
@@ -100,14 +100,14 @@ function displayUpdatedCart (){
         const total = item.price * item.quantity;
         grandTotal += total;
         cartDialog.innerHTML += `
-        <p>${item.name} - $${item.price} x ${item.quantity} = $${total}</p>`;
+        <p>${item.name} - $${item.price} x ${item.quantity} = $${total.toFixed(2)}</p>`;
 
     });
 
     const gTotal = document.createElement('p');
     const confirmOrder = document.createElement('a');
 
-    gTotal.innerHTML = `Grant Total <strong>$${grandTotal}</strong>`;
+    gTotal.innerHTML = `Grant Total <strong>$${grandTotal.toFixed(2)}</strong>`;
     confirmOrder.setAttribute('href', 'orderconfirmation.html');
     confirmOrder.textContent = "Confirm Order";
 
